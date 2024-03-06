@@ -1,0 +1,13 @@
+.footer {
+    background-color: #7eaddd; /* Бледосив фон */
+    padding: 20px 0; /* Отстояние отгоре и отдолу */
+  }
+  
+  .footer p {
+    font-size: 1.5rem; /* Увеличен размер на шрифта */
+    font-weight: bold; /* Удебелен шрифт */
+    color: #333; /* Цвят на текста */
+    margin: 0 20px; /* Отстояние между елементите */
+    text-align: center;
+  }
+  
