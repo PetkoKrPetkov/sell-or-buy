@@ -1,5 +1,6 @@
 .navbar {
     background-color: #7eaddd; /* Бледосив фон */
+    border-radius: 10px; /* Закръгленост на ъглите */
   }
   
   .navbar-nav {
@@ -23,6 +24,7 @@
     /* Другите стилове */
     list-style-type: none; /* Премахва точките от li елементите */
   }
+
 
 
   
