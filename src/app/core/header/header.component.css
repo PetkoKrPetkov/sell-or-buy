@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #7eaddd; /* Бледосив фон */
+  }
+  
+  .navbar-nav {
+    width: 100%; /* Ширина на навигационната лента */
+    display: flex;
+    justify-content: center; /* Центриране на елементите хоризонтално */
+    padding: 10px 0; /* Отстояние отгоре и отдолу */
+  }
+  
+  .navbar-brand, .nav-link {
+    font-size: 1.5rem; /* Увеличен размер на шрифта */
+    font-weight: bold; /* Удебелен шрифт */
+    color: #333; /* Цвят на текста */
+    margin: 0 20px; /* Отстояние между елементите */
+  }
+  
+  .nav-link:hover {
+    color: #007bff; /* Цвят на текста при ховър */
+  }
+  .navbar-nav {
+    /* Другите стилове */
+    list-style-type: none; /* Премахва точките от li елементите */
+  }
+
+
+  
+  
+  
