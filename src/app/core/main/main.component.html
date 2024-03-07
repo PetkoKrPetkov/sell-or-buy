@@ -1,14 +1,14 @@
+<h1>Welcome to Should I Sell or Should I Buy!</h1>
 <div class="container">
-    <div class="main-content">
-      <h1>Welcome to Should I Sell or Should I Buy!</h1>
-      <p>Last 5 items added:</p>
-      <ul class="items-list">
-        <li class="item">1</li>
-        <li class="item">2</li>
-        <li class="item">3</li>
-        <li class="item">4</li>
-        <li class="item">5</li>
-      </ul>
+  
+    <div class="card" *ngFor="let item of itemList">
+      <div class="card-content">
+          <img src="{{ item.img }}" />
+        <p>Model: {{ item.model }}</p>
+        <p>Description: {{ item.description }}</p>
+        <p>Price: ${{ item.price }}</p>
+      </div>
     </div>
   </div>
+  
   

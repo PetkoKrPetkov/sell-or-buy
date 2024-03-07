@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
+import { ListItemComponent } from '../shared/list-item/list-item.component';
 
 
 
@@ -10,7 +11,8 @@ import { MainComponent } from './main/main.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    ListItemComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { MainComponent } from './main/main.component';
   exports: [
     HeaderComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    ListItemComponent
   ]
 })
 export class CoreModule { }

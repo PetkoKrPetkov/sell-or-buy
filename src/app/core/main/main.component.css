@@ -1,44 +1,35 @@
 .container {
-    margin-top: 20px; /* Отстояние отгоре */
-    margin-bottom: 20px; /* Отстояние отдолу */
-  }
-  
-  .main-content {
-    padding: 20px; /* Вътрешни отстояния */
-    background-color: #7eaddd; /* Цвят на фона */
-    border-radius: 10px; /* Закръгленост на ъглите */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Сянка */
-  }
-  
-  .main-content h1 {
-    font-size: 24px; /* Размер на заглавието */
-    margin-bottom: 10px; /* Отстояние под заглавието */
-  }
-  
-  .main-content p {
-    font-size: 18px; /* Размер на текста */
-    margin-bottom: 20px; /* Отстояние под текста */
-  }
-  
-  .main-content ul {
-    list-style-type: none; /* Премахва маркировката на списъка */
-    padding: 0; /* Премахва вътрешните отстояния на списъка */
-  }
-  
-  .main-content li {
-    font-size: 16px; /* Размер на текста в списъка */
-    margin-bottom: 5px; /* Отстояние между елементите на списъка */
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Разпределение на картичките по ширина на контейнера */
+}
 
-  .items-list {
-    list-style-type: none; /* Премахва маркировката на списъка */
-    padding: 0; /* Премахва вътрешните отстояния на списъка */
-  }
-  
-  .item {
-    font-size: 20px; /* Размер на текста в елементите */
-    margin-bottom: 10px; /* Отстояние между елементите */
-    border-bottom: 1px solid #ccc; /* Линия под всеки елемент */
-    padding-bottom: 5px; /* Отстояние под линията */
-  }
+.card {
+  width: calc(20% - 20px); /* 33.33% от ширината на контейнера (с отстъпи между картичките) */
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.card img {
+  width: 100%;
+  max-width: 200px; /* Задаваме максимална широчина на изображението, за да не бъде по-голямо от 200px */
+  height: auto;
+  margin-right: 20px;
+}
+
+.card .info {
+  padding: 20px;
+}
+
+.card .info h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.card .info p {
+  margin-bottom: 0;
+  color: #666;
+}
+
   
