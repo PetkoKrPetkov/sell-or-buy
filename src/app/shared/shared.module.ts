@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListItemComponent } from './list-item/list-item.component';
-
-
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
-    // ListItemComponent
+    SpinnerComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+  ],
+  exports: [
+    SpinnerComponent
   ]
 })
 export class SharedModule { }

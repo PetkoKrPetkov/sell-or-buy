@@ -3,25 +3,23 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
-import { ListItemComponent } from '../shared/list-item/list-item.component';
-
-
+import { GlobalLoaderComponent } from './global-loader/global-loader.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    ListItemComponent
+    GlobalLoaderComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule, SharedModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    ListItemComponent
   ]
 })
 export class CoreModule { }

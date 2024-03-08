@@ -1,14 +1,13 @@
 <h1>Welcome to Should I Sell or Should I Buy!</h1>
+<app-global-loader *ngIf="!itemList"></app-global-loader>
+
 <div class="container">
-  
-    <div class="card" *ngFor="let item of itemList">
-      <div class="card-content">
-          <img src="{{ item.img }}" />
-        <p>Model: {{ item.model }}</p>
-        <p>Description: {{ item.description }}</p>
-        <p>Price: ${{ item.price }}</p>
-      </div>
+  <div class="card" *ngFor="let item of itemList">
+    <div class="card-content">
+      <img src="{{ item.img }}" />
+      <p>Model: {{ item.model }}</p>
+      <p>Description: {{ item.description }}</p>
+      <p>Price: ${{ item.price }}</p>
     </div>
   </div>
-  
-  
+</div>
