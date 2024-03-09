@@ -1,11 +1,11 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Разпределение на картичките по ширина на контейнера */
+    justify-content: space-between; 
   }
   
   .card {
-    width: calc(20% - 20px); /* 33.33% от ширината на контейнера (с отстъпи между картичките) */
+    width: calc(20% - 20px); 
     margin-bottom: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -13,7 +13,7 @@
   
   .card img {
     width: 100%;
-    max-width: 200px; /* Задаваме максимална широчина на изображението, за да не бъде по-голямо от 200px */
+    max-width: 200px; 
     height: auto;
     margin-right: 20px;
   }
@@ -31,3 +31,21 @@
     margin-bottom: 0;
     color: #666;
   }
+
+  /* .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    
+  }
+
+  .example-card {
+    width: calc(25% - 20px); 
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: inline-flex;
+  } */
