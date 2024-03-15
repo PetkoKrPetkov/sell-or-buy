@@ -6,14 +6,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { CreateComponent } from './create/create.component';
 import { CatalogComponent } from './catalog/catalog.component';
-import { ProfileComponent } from './profile/profile.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 @NgModule({
   declarations: [
     HomePageComponent,
     CreateComponent,
     CatalogComponent,
-    ProfileComponent
+    ItemDetailsComponent,
   ],
   imports: [
     CommonModule, SharedModule, MatButtonModule,

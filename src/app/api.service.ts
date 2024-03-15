@@ -13,4 +13,8 @@ export class ApiService {
   loadItems() {
     return this.httpClient.get<IItem[]>(apiURL + '/data/catalog');
   }
+
+  loadItem(_id: string) {
+    return this.httpClient.get<IItem>(apiURL + '/data/catalog/' + _id);
+  }
 }

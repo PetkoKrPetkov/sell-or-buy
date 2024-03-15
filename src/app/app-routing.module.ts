@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './feature/home-page/home-page.component';
 import { CreateComponent } from './feature/create/create.component';
 import { CatalogComponent } from './feature/catalog/catalog.component';
-import { ProfileComponent } from './feature/profile/profile.component';
+import { ItemDetailsComponent } from './feature/item-details/item-details.component';
 
 const routes: Routes = [
   {
@@ -24,8 +24,8 @@ const routes: Routes = [
     component: CatalogComponent
   },
   {
-    path: 'profile',
-    component: ProfileComponent
+    path: 'catalog/:_id',
+    component: ItemDetailsComponent
   },
 ];
 
