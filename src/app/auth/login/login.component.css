@@ -6,7 +6,7 @@
 }
 
 .login-form {
-    width: 300px; /* Ширина на формата */
+    width: 300px;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
@@ -25,13 +25,13 @@ input[type="submit"] {
 }
 
 input[type="submit"] {
-    background-color: #555; /* Тъмносив цвят */
+    background-color: #555; 
     color: white;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #444; /* По-тъмносив цвят при ховър */
+    background-color: #444; 
 }
 
 

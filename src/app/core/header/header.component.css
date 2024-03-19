@@ -1,36 +1,36 @@
 header {
-  background-color: #d4d4d4; /* Светло сив цвят на заден план */
-  text-align: center; /* Центриране на съдържанието на header */
-  padding: 20px 0; /* Добавяне на вътрешен отстъп за по-добър визуален вид */
+  background-color: #d4d4d4;
+  text-align: center;
+  padding: 20px 0; 
 }
 
 .main-nav {
-  display: inline-block; /* Позволява на навигацията да бъде центрирана */
+  display: inline-block;
 }
 
 .main-nav ul {
-  list-style-type: none; /* Премахване на маркерите на списъка */
+  list-style-type: none;
   padding: 0;
 }
 
 .main-nav ul li {
-  display: inline; /* Разположение на елементите на навигацията в редица */
-  margin-right: 30px; /* Отстояние между елементите на навигацията */
+  display: inline; 
+  margin-right: 30px; 
 }
 
 .main-nav ul li:last-child {
-  margin-right: 0; /* Премахване на отстоянието след последния елемент на навигацията */
+  margin-right: 0; 
 }
 
 .main-nav ul li a {
-  text-decoration: none; /* Премахване на подчертаването на връзките */
-  color: #333; /* Цвят на текста */
+  text-decoration: none; 
+  color: #333; 
   font-size: 25px;
   transition: background-color 0.3s;
 }
 
 .main-nav ul li a:hover {
-  background-color: #756a6a; /* Цвят на задния план при ховър - примерно светло сиво */
+  background-color: #756a6a; 
 }
 
 
