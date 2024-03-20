@@ -1,6 +1,6 @@
 .footer {
-  background-color: #f0f0f0; /* Цвят на заден план - светло сив */
-  padding: 20px 0; /* Вътрешен отстъп за по-добър визуален вид */
+  background-color: #f0f0f0;
+  padding: 20px 0; 
   position: fixed;
   left: 0;
   bottom: 0;
@@ -9,11 +9,11 @@
 }
 
 .footer .container {
-  text-align: center; /* Центриране на текста */
+  text-align: center; 
 }
 
 .footer p {
-  margin: 0; /* Премахване на външния отстъп на параграфа */
-  color: #333; /* Цвят на текста */
-  font-size: 25px; /* Големина на шрифта - примерно 14 пиксела */
+  margin: 0; 
+  color: #333; 
+  font-size: 25px; 
 }

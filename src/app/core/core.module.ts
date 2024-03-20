@@ -6,12 +6,14 @@ import { MainComponent } from './main/main.component';
 
 import { FeatureModule } from '../feature/feature.module';
 import { RouterModule } from '@angular/router';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     MainComponent,
+    ErrorPageComponent,
   ],
   imports: [
     CommonModule, FeatureModule, RouterModule

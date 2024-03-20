@@ -4,6 +4,7 @@ import { HomePageComponent } from './feature/home-page/home-page.component';
 import { CreateComponent } from './feature/create/create.component';
 import { CatalogComponent } from './feature/catalog/catalog.component';
 import { ItemDetailsComponent } from './feature/item-details/item-details.component';
+import { ErrorPageComponent } from './core/error-page/error-page.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'catalog/:_id',
     component: ItemDetailsComponent
+  },
+  {
+    path: '**',
+    component: ErrorPageComponent
   },
 ];
 
