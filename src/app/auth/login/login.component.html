@@ -1,11 +1,11 @@
 <div class="container">
-    <form class="login-form">
+    <form class="login-form" #form="ngForm" (ngSubmit)="login(form)">
         <h2>Login</h2>
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" >
+        <input type="text" id="email" name="email" ngModel #inputEmail="ngModel">
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" autocomplete="on">
-        <input (click)="login()" type="submit" value="Login">
+        <input type="password" id="password" name="password" autocomplete="on" ngModel #inputPassword="ngModel">
+        <input type="submit" value="Login">
     </form>
 </div>
   
