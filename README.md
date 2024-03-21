@@ -4,3 +4,4 @@ My Angular Project.
 2. Install all dependencies in the client(sell-or-buy) folder, and start by running "ng serve".
 3. You need to have installed MongoDB.
 4. Open http://localhost:4200 in your browser.
+5. Please note that the project is not yet finished and is under development!
