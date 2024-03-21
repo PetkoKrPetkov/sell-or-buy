@@ -8,7 +8,7 @@ const apiURL: string = 'http://localhost:3030';
   providedIn: 'root',
 })
 export class ApiService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
 
   loadItems() {
     return this.httpClient.get<IItem[]>(apiURL + '/data/catalog');
@@ -16,5 +16,27 @@ export class ApiService {
 
   loadItem(_id: string) {
     return this.httpClient.get<IItem>(apiURL + '/data/catalog/' + _id);
+  }
+
+  createItem(
+    make: string,
+    model: string,
+    year: string,
+    description: string,
+    price: string,
+    img: string,
+    material: string,
+    _ownerId: string
+  ) {
+    return this.httpClient.post<IItem>(apiURL + '/data/catalog', {
+      make,
+      model,
+      year,
+      description,
+      price,
+      img,
+      material,
+      _ownerId,
+    });
   }
 }

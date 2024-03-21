@@ -18,7 +18,6 @@ export class AuthService {
       this.user = JSON.parse(lsUser);
     } catch (error) {
       this.user  = undefined;
-      console.error(error)
     }
   }
 

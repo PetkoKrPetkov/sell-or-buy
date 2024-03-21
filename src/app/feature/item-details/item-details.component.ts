@@ -14,11 +14,11 @@ export class ItemDetailsComponent implements OnInit{
 
   ngOnInit(): void {
     this.apiService.loadItem("65e99cfe4a43bf49278f84c2").subscribe({
-      next: (value) => {
-        this.item = value;
-        console.log(value);
-      },
-      error: (err) => console.error(err),
+    next: (value) => {
+      this.item = value;
+      console.log(value);
+    },
+    error: (err) => console.error(err),
     });
   }
 }

@@ -1,1 +1,26 @@
-<p>item-details works!</p>
+<mat-card *ngIf="item" class="example-card">
+    <img mat-card-image src="{{ item.img }}" alt="Photo of {{item.model}}">
+    <mat-card-header>
+      <mat-card-title>{{item.model}}</mat-card-title>
+      <mat-card-subtitle>{{item.make}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        description: {{item.description}}
+      </p>
+      <p>
+        price: {{item.price}}
+      </p>
+      <p>
+        year: {{item.year}}
+      </p>
+      <p>
+        material: {{item.material}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>EDIT</button>
+      <button mat-button>DELETE</button>
+      <button mat-button>BUY</button>
+    </mat-card-actions>
+  </mat-card>

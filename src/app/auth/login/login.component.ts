@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,10 @@ import { AuthService } from '../auth-service.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  constructor(private authService: AuthService) {};
+  constructor(private authService: AuthService, private router: Router) {};
 
   login() {
     this.authService.login();
+    this.router.navigate(['/']);
   }
 }
