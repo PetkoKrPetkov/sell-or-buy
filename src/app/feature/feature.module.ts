@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { CreateComponent } from './create/create.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
   ],
   imports: [
     CommonModule, SharedModule, MatButtonModule,
-    MatCardModule
+    MatCardModule, RouterModule
   ],
   exports: [HomePageComponent]
 })

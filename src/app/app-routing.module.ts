@@ -28,7 +28,8 @@ const routes: Routes = [
   },
   {
     path: 'catalog/:_id',
-    component: ItemDetailsComponent
+    component: ItemDetailsComponent,
+    canActivate: [AuthActivate]
   },
   {
     path: '**',
