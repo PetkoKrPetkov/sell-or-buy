@@ -1,11 +1,11 @@
 <div class="container">
-    <form action="/login" method="post" class="login-form">
+    <form class="login-form">
         <h2>Login</h2>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" >
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" autocomplete="on">
-        <input type="submit" value="Login">
+        <input (click)="login()" type="submit" value="Login">
     </form>
 </div>
   
