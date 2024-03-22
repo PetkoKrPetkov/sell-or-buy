@@ -9,9 +9,11 @@
       ngModel
       #inputEmail="ngModel"
       required
+      appEmail
     />
     <ng-container  *ngIf="inputEmail.touched">
       <p class="error-message"  *ngIf="inputEmail.errors?.['required']">Email is required!</p>
+      <p class="error-message"  *ngIf="inputEmail.errors?.['invalidEmail']">Email is not in valid format!</p>
     </ng-container>
     <label for="password">Password:</label>
     <input
