@@ -6,3 +6,16 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.go-to {
+  display: inline-block;
+  text-decoration: none; 
+  color: black; 
+  transition: color 0.3s; 
+}
+
+.go-to:hover {
+  color:  #ccc ;
+  background-color: #444;
+  border: 1px solid #ccc;
+}
