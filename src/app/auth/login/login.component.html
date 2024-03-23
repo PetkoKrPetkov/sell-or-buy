@@ -11,9 +11,13 @@
       required
       appEmail
     />
-    <ng-container  *ngIf="inputEmail.touched">
-      <p class="error-message"  *ngIf="inputEmail.errors?.['required']">Email is required!</p>
-      <p class="error-message"  *ngIf="inputEmail.errors?.['invalidEmail']">Email is not in valid format!</p>
+    <ng-container *ngIf="inputEmail.touched">
+      <p class="error-message" *ngIf="inputEmail.errors?.['required']">
+        Email is required!
+      </p>
+      <p class="error-message" *ngIf="inputEmail.errors?.['invalidEmail']">
+        Email is not in a valid format!
+      </p>
     </ng-container>
     <label for="password">Password:</label>
     <input
@@ -24,9 +28,15 @@
       ngModel
       #inputPassword="ngModel"
       required
+      minlength="3"
     />
-    <ng-container  *ngIf="inputPassword.touched">
-        <p class="error-message" *ngIf="inputPassword.errors?.['required']">Password is required!</p>
+    <ng-container *ngIf="inputPassword.touched">
+      <p class="error-message" *ngIf="inputPassword.errors?.['required']">
+        Password is required!
+      </p>
+      <p class="error-message" *ngIf="inputPassword.errors?.['minlength']">
+        Password must be at least 3 characters!
+      </p>
     </ng-container>
     <input type="submit" value="Login" />
     <a class="go-to" routerLink="/register">Create an account!</a>

@@ -1,14 +1,58 @@
 <div class="container">
-    <form action="/register" method="post" class="register-form">
-        <h2>Register</h2>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required title="Please enter your email">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required title="Please enter your password">
-        <label for="confirm_password">Confirm Password:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required title="Please confirm your password">
-        <input type="submit" value="Register">
-        <a class="go-to" routerLink="/login">Have an account? Log in here.</a>
-    </form>
+  <form class="register-form" [formGroup]="form" (ngSubmit)="register()">
+    <h2>Register</h2>
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      autocomplete="email"
+      required
+      title="Please enter your email"
+      formControlName="email"
+      appEmail
+    />
+    <ng-container *ngIf="form.get('email')?.touched">
+      <p class="error-message" *ngIf="form.get('email')?.errors?.['required']">
+        Email is required!
+      </p>
+      <p
+        class="error-message"
+        *ngIf="form.get('email')?.errors?.['invalidEmail']"
+      >
+        Email is not in a valid format!
+      </p>
+    </ng-container>
+    <label for="password">Password:</label>
+    <ng-container formGroupName="passGroup">
+      <input
+        type="password"
+        id="password"
+        name="password"
+        autocomplete="new-password"
+        required
+        title="Please enter your password"
+        formControlName="password"
+      />
+      <label for="confirm_password">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirm_password"
+        autocomplete="current-password"
+        name="confirm_password"
+        required
+        title="Please confirm your password"
+        formControlName="confirm_password"
+      />
+    </ng-container>
+    <ng-container
+      *ngIf="form.get('passGroup')?.get('confirm_password')?.touched"
+    >
+      <p class="error-message" *ngIf="form.hasError('mismatch', 'passGroup')">
+        Passwords do not match!
+      </p>
+    </ng-container>
+    <input type="submit" value="Register" />
+    <a class="go-to" routerLink="/login">Have an account? Log in here.</a>
+  </form>
 </div>
-
