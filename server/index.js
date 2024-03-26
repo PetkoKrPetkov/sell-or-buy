@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
 
-const cors = require('./src/middlewares/cors');
+const cors = require('cors');
 const auth = require('./src/middlewares/auth');
 const furnitureController = require('./src/controllers/furniture');
 const usersController = require('./src/controllers/users');
@@ -21,7 +21,10 @@ async function start() {
 
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
-    app.use(cors());
+    app.use(cors({
+        origin: 'http://localhost:4200',
+        credentials: true
+      }));
     app.use(auth());
 
     app.use('/data/catalog', furnitureController);

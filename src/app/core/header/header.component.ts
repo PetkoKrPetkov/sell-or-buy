@@ -14,7 +14,7 @@ export class HeaderComponent {
   }
 
   get name(): string {
-    return this.authService.user?.name  || '';
+    return this.authService.user?.email.split('@')[0]  || '';
   }
 
   logout() {

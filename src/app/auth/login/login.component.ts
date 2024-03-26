@@ -15,9 +15,12 @@ export class LoginComponent {
     if(form.invalid ) {
       return
     }
-    console.log(form.value);
+
+    const { email, password } = form.value;
     
-    this.authService.login();
-    this.router.navigate(['/']);
+    this.authService.login(email, password).subscribe(() => {
+      this.router.navigate(['/']);
+    });
+    
   }
 }

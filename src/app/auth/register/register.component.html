@@ -52,7 +52,7 @@
         Passwords do not match!
       </p>
     </ng-container>
-    <input type="submit" value="Register" />
+    <input [disabled]="form.invalid" type="submit" value="Register" />
     <a class="go-to" routerLink="/login">Have an account? Log in here.</a>
   </form>
 </div>

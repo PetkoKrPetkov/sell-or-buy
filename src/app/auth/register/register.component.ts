@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, ValidatorFn, Validators } from '@angular/forms';
+import { AuthService } from '../auth-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,7 +9,11 @@ import { FormBuilder, ValidatorFn, Validators } from '@angular/forms';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   form = this.formBuilder.group({
     email: ['', [Validators.required, Validators.email]],
@@ -33,5 +39,15 @@ export class RegisterComponent {
     if (this.form.invalid) {
       return;
     }
+
+    const { email, passGroup: { password, confirm_password } = {} } =
+      this.form.value;
+    if (password !== confirm_password) {
+      return;
+    }
+    this.authService.register(email!, password!).subscribe(() => {
+      this.router.navigate(['/profile']);
+    });
+    console.log(this.form.value);
   }
 }

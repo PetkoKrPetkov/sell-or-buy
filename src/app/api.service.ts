@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IItem } from './interfaces/item';
 
-const apiURL: string = 'http://localhost:3030';
+ export const apiURL: string = 'http://localhost:3030';
 
 @Injectable({
   providedIn: 'root',
