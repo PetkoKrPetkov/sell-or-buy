@@ -40,3 +40,9 @@ input[type="submit"]:hover {
     background-color: #444;
 }
 
+.error-message {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+}
+

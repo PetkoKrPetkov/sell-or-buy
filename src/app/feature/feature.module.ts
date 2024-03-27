@@ -8,6 +8,7 @@ import { CreateComponent } from './create/create.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule, SharedModule, MatButtonModule,
-    MatCardModule, RouterModule
+    MatCardModule, RouterModule, FormsModule
   ],
   exports: [HomePageComponent]
 })

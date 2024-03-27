@@ -23,8 +23,16 @@ async function start() {
     app.use(express.json());
     app.use(cors({
         origin: 'http://localhost:4200',
-        credentials: true
+        credentials: true,
       }));
+
+     app.use((req, res, next) => {
+        // res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, HEAD');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Authorization');
+    
+        next();
+    }) 
     app.use(auth());
 
     app.use('/data/catalog', furnitureController);
