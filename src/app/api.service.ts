@@ -30,9 +30,9 @@ export class ApiService {
     accessToken: string
   ) {
     const payload = { make, model, year, description, price, img, material, _ownerId };
-    const headers = new HttpHeaders({
-      'x-authorization': accessToken
-    });
-    return this.httpClient.post<IItem>('/api' + '/data/catalog', payload, { headers });
+    // const headers = new HttpHeaders({
+    //   'x-authorization': accessToken
+    // });
+    return this.httpClient.post<IItem>('/api' + '/data/catalog', payload);
   }
 }
