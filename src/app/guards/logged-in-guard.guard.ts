@@ -6,14 +6,16 @@ import { AuthService } from '../auth/auth-service.service';
   providedIn: 'root',
 })
 export class LoggedInGuard implements CanActivate {
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+  ) {}
 
   canActivate(): boolean {
     if (this.authService.isLogged) {
-      this.router.navigate(['/']);
+      this.router.navigate(['/home-page']);
       return false;
     }
     return true;
   }
 }
-
