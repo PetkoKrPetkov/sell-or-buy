@@ -35,4 +35,12 @@ export class ApiService {
     });
     return this.httpClient.post<IItem>('/api' + '/data/catalog', payload, { headers });
   }
+
+  deleteItem(id: string,  accessToken: string) {
+    const headers = new HttpHeaders({
+      'x-authorization': accessToken,
+    });
+    
+    return this.httpClient.delete<IItem>('/api/data/catalog/' + id, { headers })
+  }
 }

@@ -1,5 +1,6 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { IItem } from 'src/app/interfaces/item';
 
@@ -10,10 +11,13 @@ import { IItem } from 'src/app/interfaces/item';
 })
 export class ItemDetailsComponent implements OnInit {
   item: IItem | null = null;
+  private accessToken: string | undefined
+  private  _ownerId: string | undefined
 
   constructor(
     private apiService: ApiService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -28,6 +32,25 @@ export class ItemDetailsComponent implements OnInit {
         },
         error: (err) => console.error(err),
       });
+    });
+  }
+
+  deleteItem(id: string) {
+    const lsUser = localStorage.getItem('[user]');
+    if (lsUser) {
+      const user = JSON.parse(lsUser);
+      this._ownerId = user._id;
+      this.accessToken = user.accessToken
+    }
+
+    this.apiService.deleteItem(id, this.accessToken!).subscribe({
+      next: () => {
+        console.log('Item deleted successfully');
+        this.router.navigate(['/']);
+      },
+      error: (err) => {
+        console.error(err.message);
+      }
     });
   }
 }
