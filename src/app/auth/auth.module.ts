@@ -6,6 +6,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, ProfileComponent],
@@ -15,6 +17,8 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     SharedModule,
     ReactiveFormsModule,
+    MatCardModule,
+    MatButtonModule
   ],
 })
 export class AuthModule {}

@@ -19,3 +19,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-color: #444;
   border: 1px solid #ccc;
 }
+.center-text {
+  text-align: center; 
+  margin-top: 0; 
+}

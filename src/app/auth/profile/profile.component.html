@@ -1,21 +1,20 @@
-<div class="profile-card">
-    <div class="profile-picture">
-        <img src="/assets/images.jpeg" alt="Profile Picture">
-    </div>
-    <div class="profile-info">
-        <h2>Email: john.doe@example.com</h2>
-        <h3>Created Items:</h3>
-        <ul>
-            <li>Item 1 <button onclick="viewDetails('item1')">View Details</button></li>
-            <li>Item 2 <button onclick="viewDetails('item2')">View Details</button></li>
-            <!-- Add other created items -->
-        </ul>
-        <h3>Purchased Items:</h3>
-        <ul>
-            <li>Item 3 <button onclick="viewDetails('item3')">View Details</button></li>
-            <li>Item 4 <button onclick="viewDetails('item4')">View Details</button></li>
-            <!-- Add other purchased items -->
-        </ul>
-    </div>
-</div>
+<h1 class="center-text">Welcome to your profile {{ email }}</h1>
+<h2>Items created by you:</h2>
 
+<app-spinner *ngIf="!itemList" class="global-loader"></app-spinner>
+
+<div class="item-list" *ngIf="itemList && itemList.length > 0">
+  <div *ngFor="let item of itemList" class="item-card">
+    <img
+      class="item-image"
+      src="{{ item.img }}"
+      alt="Photo of {{ item.model }}"
+    />
+    <div class="item-details">
+      <h3>{{ item.model }}</h3>
+      <p class="item-make">{{ item.make }}</p>
+      <p class="item-price">{{ item.price }}</p>
+      <button mat-button [routerLink]="['/catalog', item._id]">Details</button>
+    </div>
+  </div>
+</div>

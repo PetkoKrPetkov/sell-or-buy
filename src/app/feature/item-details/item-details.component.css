@@ -1,16 +1,71 @@
-.example-card {
-  max-width: 250px;
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.example-header-image {
-  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
-  background-size: cover;
-}
-
-.example-card {
-  width: calc(25% - 20px);
-  margin: 20px;
+.item-card {
+  width: 250px;
+  margin: 10px auto;
   background-color: #fff;
   border: 1px solid #ccc;
-  display: inline-flex;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.item-image {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.item-details {
+  padding: 16px;
+}
+
+.item-details h3 {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+.item-make {
+  color: #666;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #009688;
+}
+
+button {
+  background-color: #009688;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00796b;
+}
+
+.custom-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-button {
+  flex-grow: 1;
+  margin-right: 4px;
+}
+
+.right-button {
+  flex-grow: 1;
+  margin-left: 4px;
 }
