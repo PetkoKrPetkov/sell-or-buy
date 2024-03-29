@@ -1,7 +1,9 @@
 <h1 class="center-text">Welcome to your profile {{ email }}</h1>
-<h2>Items created by you:</h2>
+<h2 class="center-text">Items created by you:</h2>
 
 <app-spinner *ngIf="!itemList" class="global-loader"></app-spinner>
+
+<h1 class="center-text" *ngIf="!itemList || itemList.length === 0" > You dont have any records</h1>
 
 <div class="item-list" *ngIf="itemList && itemList.length > 0">
   <div *ngFor="let item of itemList" class="item-card">

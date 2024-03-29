@@ -1,16 +1,22 @@
 <h1 class="center-text">Welcome to Should I Sell or Should I Buy!</h1>
 <app-spinner *ngIf="!itemList" class="global-loader"></app-spinner>
 
+<h1 class="center-text" *ngIf="!itemList || itemList.length === 0">
+  No records yet. Be the first to create one!
+</h1>
+
 <div class="item-list" *ngIf="itemList && itemList.length > 0">
   <div *ngFor="let item of itemList" class="item-card">
-    <img class="item-image" src="{{ item.img }}" alt="Photo of {{item.model}}">
+    <img
+      class="item-image"
+      src="{{ item.img }}"
+      alt="Photo of {{ item.model }}"
+    />
     <div class="item-details">
-      <h3>{{item.model}}</h3>
-      <p class="item-make">{{item.make}}</p>
-      <p class="item-price">{{item.price}}</p>
+      <h3>{{ item.model }}</h3>
+      <p class="item-make">{{ item.make }}</p>
+      <p class="item-price">{{ item.price }}</p>
       <button mat-button [routerLink]="['/catalog', item._id]">Details</button>
     </div>
   </div>
 </div>
-
-  

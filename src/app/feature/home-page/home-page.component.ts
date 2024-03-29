@@ -16,15 +16,19 @@ export class HomePageComponent implements OnInit {
     private authService: AuthService
   ) {}
 
-  get isLoggedIn():boolean {
+  get isLoggedIn(): boolean {
     return this.authService.isLogged;
   }
 
   ngOnInit(): void {
     this.apiService.loadItems().subscribe({
       next: (value) => {
-        this.itemList = value;
-        console.log(value);
+        if (value && value.length >= 4) {
+          this.itemList = value.slice(-4);
+        } else {
+          this.itemList = value;
+        }
+        console.log(this.itemList);
       },
       error: (err) => console.error(err),
     });
