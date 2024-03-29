@@ -1,16 +1,18 @@
 <div class="container">
     <div class="create-form">
-      <h2>Create Item</h2>
-      <!-- <form #form="ngForm" (ngSubmit)="createItem(form)"> -->
-        <form>
+      <h2>Edit Item</h2>
+      <div>{{ item?.model}}</div>
+     
+        <form #form="ngForm" (ngSubmit)="editItem(form)">
         <div>
           <label for="model">Model:</label>
           <input
             type="text"
             id="model"
             name="model"
-            #inputModel="ngModel"
+            #textareaModel="ngModel"
             ngModel
+            [ngModel]="item?.model"
             required
           />
         </div>
@@ -22,12 +24,13 @@
             rows="4"
             #textareaDescription="ngModel"
             ngModel
+            [ngModel]="item?.description"
             required
           ></textarea>
         </div>
         <div>
           <label for="make">Make:</label>
-          <input type="text" id="make" name="make" #inputMake="ngModel" ngModel required/>
+          <input type="text" id="make" name="make" #inputMake="ngModel" ngModel [ngModel]="item?.make" required/>
         </div>
         <div>
           <label for="material">Material:</label>
@@ -37,12 +40,13 @@
             name="material"
             #inputMaterial="ngModel"
             ngModel
+            [ngModel]="item?.material"
             required
           />
         </div>
         <div>
           <label for="year">Year:</label>
-          <input type="number" id="year" name="year" #inputYear="ngModel" ngModel required/>
+          <input type="number" id="year" name="year" #inputYear="ngModel" ngModel [ngModel]="item?.year" required/>
         </div>
         <div>
           <label for="price">Price:</label>
@@ -52,14 +56,15 @@
             name="price"
             #inputPrice="ngModel"
             ngModel
+            [ngModel]="item?.price"
             required
           />
         </div>
         <div>
           <label for="img">Image URL:</label>
-          <input type="text" id="img" name="img" #inputIMG="ngModel" ngModel required/>
+          <input type="text" id="img" name="img" #inputIMG="ngModel" ngModel [ngModel]="item?.img" required/>
         </div>
-        <!-- <button (click)="createItem(form)">Create</button> -->
+        <button>Edit</button>
       </form>
       <!-- <ng-container *ngIf="form.invalid && (form.dirty || form.touched)">
         <p class="error-message">All fields are required</p>

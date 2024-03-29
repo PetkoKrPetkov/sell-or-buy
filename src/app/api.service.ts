@@ -43,4 +43,23 @@ export class ApiService {
     
     return this.httpClient.delete<IItem>('/api/data/catalog/' + id, { headers })
   }
+
+  updateItem(
+    make: string,
+    model: string,
+    year: number,
+    description: string,
+    price: number,
+    img: string,
+    material: string,
+    _ownerId: string,
+    accessToken: string,
+    itemId: string
+  ) {
+    const payload = { make, model, year, description, price, img, material, _ownerId };
+    const headers = new HttpHeaders({
+      'x-authorization': accessToken
+    });
+    return this.httpClient.put<IItem>('/api/data/catalog/' + itemId , payload, { headers });
+  }
 }
