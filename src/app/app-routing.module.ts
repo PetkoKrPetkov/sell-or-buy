@@ -4,7 +4,7 @@ import { HomePageComponent } from './feature/home-page/home-page.component';
 import { CreateComponent } from './feature/create/create.component';
 import { CatalogComponent } from './feature/catalog/catalog.component';
 import { ItemDetailsComponent } from './feature/item-details/item-details.component';
-import { ErrorPageComponent } from './core/error-page/error-page.component';
+import { NotFoundComponent } from './core/not-found/not-found.component';
 import { AuthActivate } from './guards/auth.activate';
 import { EditComponent } from './feature/edit/edit.component';
 
@@ -86,7 +86,7 @@ const routes: Routes = [
   },
   {
     path: '404',
-    component: ErrorPageComponent
+    component: NotFoundComponent
   },
 ];
 

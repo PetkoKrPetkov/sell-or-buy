@@ -13,9 +13,9 @@
       alt="Photo of {{ item.model }}"
     />
     <div class="item-details">
-      <h3>{{ item.model }}</h3>
-      <p class="item-make">{{ item.make }}</p>
-      <p class="item-price">{{ item.price }}</p>
+      <h3>Model: {{ item.model }}</h3>
+      <p class="item-make">Make: {{ item.make }}</p>
+      <p class="item-price">Price: {{ item.price }}$</p>
       <button mat-button [routerLink]="['/catalog', item._id]">Details</button>
     </div>
   </div>
