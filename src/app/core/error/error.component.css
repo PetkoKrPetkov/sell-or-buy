@@ -1,0 +1,24 @@
+.notification {
+  position: fixed;
+  z-index: 10;
+  padding: 1rem; 
+  left: 50%; 
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  border-radius: 0.5rem;
+  color: rgb(250, 250, 250);
+  font-style: normal;
+  text-decoration: underline;
+  box-shadow: 0 5px 11px rgb(200, 200, 200);
+  background-color: rgba(70, 6, 6, 0.7);
+  max-width: 80%;
+}
+
+.notification.error-message {
+  background-color: rgba(116, 5, 5, 0.699); 
+}
+
+.notification.success-message {
+  background-color: rgba(99, 230, 81, 0.699);
+}
+

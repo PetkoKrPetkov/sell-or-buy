@@ -7,6 +7,7 @@ import { MainComponent } from './main/main.component';
 import { FeatureModule } from '../feature/feature.module';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FooterComponent,
     MainComponent,
     NotFoundComponent,
+    ErrorComponent,
   ],
   imports: [
     CommonModule, FeatureModule, RouterModule

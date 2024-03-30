@@ -7,6 +7,7 @@ import { ItemDetailsComponent } from './feature/item-details/item-details.compon
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import { AuthActivate } from './guards/auth.activate';
 import { EditComponent } from './feature/edit/edit.component';
+import { ErrorComponent } from './core/error/error.component';
 
 // const routes: Routes = [
 //   {
@@ -79,6 +80,10 @@ const routes: Routes = [
         component: CatalogComponent
       }
     ]
+  },
+  {
+    path: 'error',
+    component: ErrorComponent
   },
   {
     path: '**',
