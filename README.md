@@ -1,24 +1,23 @@
 Setup Information
 
-Server Setup: Install all dependencies in the server folder by running "npm i", then start it with "npm start".
-Client Setup: Install all dependencies in the client (sell-or-buy) folder by running "npm i", and start by running "ng serve".
+Server Setup: Install all dependencies in the server folder by running "npm i", then start it with "npm start". 
+Client Setup: Install all dependencies in the client (sell-or-buy) folder by running "npm i", and start by running "ng serve". 
 Database Requirement: MongoDB needs to be installed.
 Access: Open http://localhost:4200 in your browser.
 Please note that the project is not yet finished and is under development!
 
-Project Documentation: My Angular Project
 Public Section
-Unauthenticated Users
-For unauthenticated users, the project provides the following features:
 
+For unauthenticated users, the project provides the following features:
 Home Page: http://localhost:4200/home-page
 Login Page: http://localhost:4200/login
 Register Page: http://localhost:4200/register
-
 Section Only for Authenticated Users
 For authenticated users, the project offers the following functionalities:
-
 Catalog Page: http://localhost:4200/catalog
+
+Private Section
+
 Authenticated Users see all records.
 Create Record Page: http://localhost:4200/create
 Authenticated Users can create a record
