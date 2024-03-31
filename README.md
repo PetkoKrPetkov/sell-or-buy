@@ -1,4 +1,5 @@
 Setup Information
+
 Server Setup: Install all dependencies in the server folder by running "npm i", then start it with "npm start".
 Client Setup: Install all dependencies in the client (sell-or-buy) folder by running "npm i", and start by running "ng serve".
 Database Requirement: MongoDB needs to be installed.
