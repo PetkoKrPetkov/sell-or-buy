@@ -1,4 +1,3 @@
-import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
@@ -11,16 +10,20 @@ import { IItem } from 'src/app/interfaces/item';
 })
 export class ItemDetailsComponent implements OnInit {
   item: IItem | null = null;
-  private accessToken: string | undefined
-  private  _ownerId: string | undefined
+  private accessToken: string | undefined;
+  private _ownerId: string | undefined;
+  public isOwner: boolean | undefined;
+  private lsUser: string | null = null;
 
   constructor(
     private apiService: ApiService,
     private activatedRoute: ActivatedRoute,
-    private router: Router,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
+    this.lsUser = localStorage.getItem('[user]');
+
     this.activatedRoute.params.subscribe((data) => {
       console.log(data['_id']);
       const id = data['_id'];
@@ -29,28 +32,35 @@ export class ItemDetailsComponent implements OnInit {
         next: (value) => {
           this.item = value;
           console.log(value);
+          this.checkOwnership();
         },
         error: (err) => console.error(err),
       });
     });
   }
 
-  deleteItem(id: string) {
-    const lsUser = localStorage.getItem('[user]');
-    if (lsUser) {
-      const user = JSON.parse(lsUser);
+  checkOwnership() {
+    if (this.lsUser) {
+      const user = JSON.parse(this.lsUser);
       this._ownerId = user._id;
-      this.accessToken = user.accessToken
+      this.accessToken = user.accessToken;
+      this.isOwner = this.item?._ownerId === this._ownerId;
     }
+  }
 
-    this.apiService.deleteItem(id, this.accessToken!).subscribe({
-      next: () => {
-        console.log('Item deleted successfully');
-        this.router.navigate(['/']);
-      },
-      error: (err) => {
-        console.error(err.message);
-      }
-    });
+  deleteItem(id: string) {
+    if (this.isOwner) {
+      this.apiService.deleteItem(id, this.accessToken!).subscribe({
+        next: () => {
+          console.log('Item deleted successfully');
+          this.router.navigate(['/']);
+        },
+        error: (err) => {
+          console.error(err.message);
+        },
+      });
+    } else {
+      this.router.navigate(['/']);
+    }
   }
 }

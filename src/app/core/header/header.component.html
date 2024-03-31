@@ -2,7 +2,7 @@
   <nav class="main-nav">
     <ul>
       <li><a routerLink="/home-page">Home</a></li>
-      <li><a routerLink="/catalog">Catalog</a></li>
+      <li *ngIf="isLoggedIn"><a routerLink="/catalog">Catalog</a></li>
       <li *ngIf="!isLoggedIn"><a routerLink="/login">Login</a></li>
       <li *ngIf="!isLoggedIn"><a routerLink="/register">Register</a></li>
       <li *ngIf="isLoggedIn"><a routerLink="/create">Create</a></li>
