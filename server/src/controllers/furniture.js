@@ -15,7 +15,6 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', isAuth(),  async (req, res) => {
-    console.log(req.body);
     const item = {
         make: req.body.make,
         model: req.body.model,
