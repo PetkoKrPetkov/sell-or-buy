@@ -6,18 +6,15 @@ Database Requirement: MongoDB needs to be installed.
 Access: Open http://localhost:4200 in your browser.
 Please note that the project is not yet finished and is under development!
 
-Public Section
+Public Section: For unauthenticated users, the project provides the following features:
 
-For unauthenticated users, the project provides the following features:
 Home Page: http://localhost:4200/home-page
 Login Page: http://localhost:4200/login
 Register Page: http://localhost:4200/register
-Section Only for Authenticated Users
-For authenticated users, the project offers the following functionalities:
+
+Private Section: For authenticated users, the project offers the following functionalities:
+
 Catalog Page: http://localhost:4200/catalog
-
-Private Section
-
 Authenticated Users see all records.
 Create Record Page: http://localhost:4200/create
 Authenticated Users can create a record
@@ -31,7 +28,9 @@ Users who own the record can edit the information for a given record.
 Upon pressing the "Delete" button, if the user owns the record, it will be deleted.
 
 Data Validation
+
 To ensure the validity of the entered data, the project utilizes the built-in form validation capabilities in Angular. This includes field requirements, minimum and maximum length for text fields, and others.
 
 Error Handling
+
 In case of an error returned from the server, users will receive an appropriate error message, aiding them in understanding the issue and taking necessary actions.
