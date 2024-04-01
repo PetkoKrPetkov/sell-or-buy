@@ -9,7 +9,7 @@ const usersController = require('./src/controllers/users');
 
 async function start() {
     try {
-        const db = await mongoose.connect('mongodb://localhost:27017/furniture2');
+        const db = await mongoose.connect('mongodb://localhost:27017/sell-or-buy');
 
         console.log('DB Ready');
     } catch (err) {
