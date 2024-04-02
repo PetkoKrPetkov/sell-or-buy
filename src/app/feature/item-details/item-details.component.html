@@ -6,14 +6,14 @@
     alt="Photo of {{ item.model }}"
   />
   <mat-card-header>
-    <mat-card-title>{{ item.model }}</mat-card-title>
-    <mat-card-subtitle class="item-make">{{ item.make }}</mat-card-subtitle>
+    <mat-card-title>Model: {{ item.model }}</mat-card-title>
+    <mat-card-subtitle class="item-make">Make: {{ item.make }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content class="item-details">
     <p>Description: {{ item.description }}</p>
-    <p>Price: {{ item.price }}</p>
     <p>Year: {{ item.year }}</p>
     <p>Material: {{ item.material }}</p>
+    <p>Price: {{ item.price }}</p>
   </mat-card-content>
   <mat-card-actions *ngIf="isOwner">
     <button

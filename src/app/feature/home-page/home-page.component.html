@@ -15,7 +15,6 @@
     />
     <div class="item-details">
       <h3>Model: {{ item.model }}</h3>
-      <p class="item-make">Make: {{ item.make }}</p>
       <p class="item-price"> Price:{{ item.price }}$</p>
       <button *ngIf="isLoggedIn" mat-button [routerLink]="['/catalog', item._id]">Details</button>
     </div>
