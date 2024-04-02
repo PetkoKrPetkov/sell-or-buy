@@ -46,7 +46,7 @@ export class RegisterComponent {
       return;
     }
     this.authService.register(email!, password!).subscribe(() => {
-      this.router.navigate(['/profile']);
+      this.router.navigate(['/auth/profile']);
     });
     console.log(this.form.value);
   }
