@@ -9,8 +9,8 @@ Please note that the project is not yet finished and is under development!
 Public Section: For unauthenticated users, the project provides the following features:
 
 Home Page: http://localhost:4200/home-page
-Login Page: http://localhost:4200/login
-Register Page: http://localhost:4200/register
+Login Page: http://localhost:4200/auth/login
+Register Page: http://localhost:4200/auth/register
 
 Private Section: For authenticated users, the project offers the following functionalities:
 
@@ -18,7 +18,7 @@ Catalog Page: http://localhost:4200/catalog
 Authenticated Users see all records.
 Create Record Page: http://localhost:4200/create
 Authenticated Users can create a record
-Profile Page: http://localhost:4200/profile
+Profile Page: http://localhost:4200/auth/profile
 Users can view their email and any records they have created.
 Details Page: http://localhost:4200/catalog/:id
 Users can see detailed information about a record.

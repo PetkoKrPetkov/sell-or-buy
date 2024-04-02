@@ -59,6 +59,9 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
+    path: 'auth', loadChildren: () => import('../app/auth/auth.module').then(m => m.AuthModule),
+  },
+  {
     path: 'create',
     component: CreateComponent,
     canActivate: [AuthActivate]

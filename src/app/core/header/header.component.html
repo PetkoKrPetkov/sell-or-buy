@@ -3,11 +3,11 @@
     <ul>
       <li><a routerLink="/home-page">Home</a></li>
       <li *ngIf="isLoggedIn"><a routerLink="/catalog">Catalog</a></li>
-      <li *ngIf="!isLoggedIn"><a routerLink="/login">Login</a></li>
-      <li *ngIf="!isLoggedIn"><a routerLink="/register">Register</a></li>
+      <li *ngIf="!isLoggedIn"><a routerLink="/auth/login">Login</a></li>
+      <li *ngIf="!isLoggedIn"><a routerLink="/auth/register">Register</a></li>
       <li *ngIf="isLoggedIn"><a routerLink="/create">Create</a></li>
       <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li>
-      <li *ngIf="isLoggedIn"><a routerLink="/profile">{{name}}'s Profile</a></li>
+      <li *ngIf="isLoggedIn"><a routerLink="/auth/profile">{{name}}'s Profile</a></li>
     </ul>
   </nav> 
 </header>
